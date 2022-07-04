@@ -33,11 +33,11 @@ jobs:
       
       # This is to install surge command on ubuntu-latest virtual server 
     - name: Install Surge 
-    - run: npm install --global surge  
+      run: npm install --global surge  
       
       # Now Deploy application on surge
     - name: Deploy site on surge
-    - run: surge ./ javascriptprojects2022.surge.sh --token ${{ secrets.project001_surge_token }}
+      run: surge ./ javascriptprojects2022.surge.sh --token ${{ secrets.project001_surge_token }}
 
 
 
