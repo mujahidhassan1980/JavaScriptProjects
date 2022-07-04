@@ -23,21 +23,21 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Installing Node.js
-        uses: actions/setup-node@v3
-        with: 
-          node-version: 14
+    - name: Installing Node.js
+      uses: actions/setup-node@v3
+      with: 
+        node-version: 14
       
       # This is to install surge command on ubuntu-latest virtual server 
-      - name: Install Surge 
-      - run: npm install --global surge  
+    - name: Install Surge 
+    - run: npm install --global surge  
       
       # Now Deploy application on surge
-      - name: Deploy site on surge
-      - run: surge ./ javascriptprojects2022.surge.sh --token ${{ secrets.project001_surge_token }}
+    - name: Deploy site on surge
+    - run: surge ./ javascriptprojects2022.surge.sh --token ${{ secrets.project001_surge_token }}
 
 
 
